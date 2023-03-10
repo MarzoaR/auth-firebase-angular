@@ -29,7 +29,11 @@ export class LoginComponent {
       console.log(response)
       this.router.navigate(['/home'])
     })
-    .catch(error => console.log(error))
+    .catch(error => {
+      const msg: string = error.message.slice(17,-2);
+      // console.log(this.authFirebaseService.errorMessage(msg));
+      alert(`${msg.toUpperCase()}\n${this.authFirebaseService.errorMessage(msg)}`);
+    })
   }
 
   loginWithGoogle(){
@@ -38,6 +42,10 @@ export class LoginComponent {
       console.log(response);
       this.router.navigate(['/home'])
     })
-    .catch(error => console.log(error))
+    .catch(error => {
+      const msg: string = error.message.slice(17,-2);
+      // console.log(this.authFirebaseService.errorMessage(msg));
+      alert(`${msg.toUpperCase()}\n${this.authFirebaseService.errorMessage(msg)}`);
+    })
   }
 }

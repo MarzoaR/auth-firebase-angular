@@ -18,7 +18,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
